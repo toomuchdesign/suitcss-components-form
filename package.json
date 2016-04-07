@@ -1,5 +1,5 @@
 {
-  "name": "toomuchdesign/suitcss-components-form",
+  "name": "@toomuchdesign/suitcss-components-form",
   "description": "A very lightweight SUIT component for forms",
   "version": "0.0.0",
   "devDependencies": {
