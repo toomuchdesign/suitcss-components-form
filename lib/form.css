@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SUIT form
+   SUITCSS component form
    ========================================================================== */
 
 /**
@@ -39,7 +39,6 @@
 
 .Form-input {
     border: 1px solid #000;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0.5em 0.6em;
 }
@@ -49,7 +48,6 @@
  */
 
 .Form-input[type="search"] {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
