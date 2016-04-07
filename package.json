@@ -1,7 +1,6 @@
 {
-  "name": "suit-form",
-  "private": true,
-  "description": "",
+  "name": "toomuchdesign/suitcss-components-form",
+  "description": "A very lightweight SUIT component for forms",
   "version": "0.0.0",
   "devDependencies": {
     "csslint": ">=0.9.10",
