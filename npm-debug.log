@@ -1,0 +1,91 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.7.2
+3 info using node@v4.0.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/andreacarraro/toomuchdesign/suitcss-components-form',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/andreacarraro/.npm/@toomuchdesign/suitcss-components-form/0.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/andreacarraro/.npm correctMkdir not in flight; initializing
+10 info lifecycle @toomuchdesign/suitcss-components-form@0.0.0~prepublish: @toomuchdesign/suitcss-components-form@0.0.0
+11 silly lifecycle @toomuchdesign/suitcss-components-form@0.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/andreacarraro/.npm/@toomuchdesign/suitcss-components-form/0.0.0/package.tgz',
+12 verbose tar pack   '/Users/andreacarraro/toomuchdesign/suitcss-components-form' ]
+13 verbose tarball /Users/andreacarraro/.npm/@toomuchdesign/suitcss-components-form/0.0.0/package.tgz
+14 verbose folder /Users/andreacarraro/toomuchdesign/suitcss-components-form
+15 verbose addLocalTarball adding from inside cache /Users/andreacarraro/.npm/@toomuchdesign/suitcss-components-form/0.0.0/package.tgz
+16 verbose correctMkdir /Users/andreacarraro/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd @toomuchdesign/suitcss-components-form@0.0.0
+18 verbose afterAdd /Users/andreacarraro/.npm/@toomuchdesign/suitcss-components-form/0.0.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/andreacarraro/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/andreacarraro/.npm/@toomuchdesign/suitcss-components-form/0.0.0/package/package.json written
+21 silly publish { name: '@toomuchdesign/suitcss-components-form',
+21 silly publish   description: 'A very lightweight SUIT component for forms',
+21 silly publish   version: '0.0.0',
+21 silly publish   devDependencies: { csslint: '>=0.9.10', component: '*' },
+21 silly publish   scripts: { test: 'csslint *.css' },
+21 silly publish   readme: '# SUIT form\n\n[![Build Status](https://secure.travis-ci.org/suitcss/form.png?branch=master)](http://travis-ci.org/suitcss/form)\n\nA very lightweight SUIT component for forms.\n\nRead more about [SUIT\'s design principles](https://github.com/suitcss/suit/).\n\n## Installation\n\n* [Bower](http://bower.io/): `bower install --save suit-form`\n* [Component(1)](http://component.io/): `component install suitcss/suit-form`\n* Download: [zip](https://github.com/suitcss/form/zipball/master)\n* Git: `git clone https://github.com/suitcss/form.git`\n\n\n## Available classes\n\n* `Form` - Provides some basic display and alignment adjustments to form elements.\n* `Form--inline` -.\n* `Form-item` - The wrapper for a label-control pair.\n* `Form-item--stacked` - Modifier to stack labels on top of controls.\n* `Form-label` - A control\'s _visual_ label.\n* `Form-input` - Styles intended for text-based controls (e.g., `textarea` or `input`)\n\n\n## Usage\n\nSUIT form depends on normalize.css:\n\n```css\n@import "/bower_components/normalize-css/normalize.css";\n@import "/bower_components/suit-form/form.css";\n```\n\nSUIT form works best with other structural packages, especially:\n\n* [suit-utils-state](https://github.com/suitcss/utils-state) - for accessible hiding of labels\n* [suit-utils-dimension](https://github.com/suitcss/utils-dimension) - for dimension control of form elements\n* [suit-button](https://github.com/suitcss/button) - for form buttons\n\nExample compact form:\n\n```html\n<form class="Form">\n    <fieldset>\n        <label class="u-isHiddenVisually" for="email">Email</label>\n        <input class="Form-input" id="email" type="email" placeholder="Email">\n\n        <label class="u-isHiddenVisually" for="password">Password</label>\n        <input class="Form-input" id="password" type="password" placeholder="Password">\n\n        <input id="remember" type="checkbox">\n        <label for="remember">Remember me</label>\n\n        <button type="submit" class="Button">Sign in</button>\n    </fieldset>\n</form>\n```\n\nExample of horizontally arranged label-control pairs:\n\n```html\n<form class="Form">\n    <div class="Form-item">\n        <label class="Form-label u-size1of4" for="name">Choose username</label>\n        <input class="Form-input" id="name" placeholder="">\n    </div>\n\n    <div class="Form-item u-before1of4">\n        <input id="remember" type="checkbox">\n        <label for="remember">Remember me</label>\n    </div>\n\n    <button type="submit" class="Button u-before1of4">Sign up</button>\n</form>\n```\n\nExample of a stacked form:\n\n\n```html\n<form class="Form">\n    <div class="Form-item Form-item--stacked">\n        <label class="Form-label" for="name">Choose username</label>\n        <input class="Form-input" id="name" placeholder="">\n    </div>\n\n    <button type="submit" class="Button">Sign up</button>\n</form>\n```\n\nSee the test file for more examples.\n\n## Testing\n\nInstall [Node](http://nodejs.org) (comes with npm). It\'s recommended that you\nalso globally install [Component(1)](http://component.io): `npm install -g\ncomponent`.\n\nFrom the repo root, install the project\'s development dependencies:\n\n```\nmake\n```\n\nTo run the CSS Lint tests and build the front-end development bundle:\n\n```\nmake test\n```\n\nBasic visual tests are in `test.html`.\n\n## Browser support\n\n* Google Chrome (latest)\n* Opera (latest)\n* Firefox 4+\n* Safari 5+\n* Internet Explorer 8+\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'a9587a3a7142405a3c6c54e5ef72ae43f65c2bd6',
+21 silly publish   _id: '@toomuchdesign/suitcss-components-form@0.0.0',
+21 silly publish   _shasum: 'ad1529eafe72a1bbccf3522f72f03f620be4393d',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name @toomuchdesign/suitcss-components-form
+24 silly mapToRegistry scope (from package name) @toomuchdesign
+25 verbose mapToRegistry no registry URL found in name for scope @toomuchdesign
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/@toomuchdesign%2fsuitcss-components-form
+29 verbose publish registryBase https://registry.npmjs.org/
+30 silly publish uploading /Users/andreacarraro/.npm/@toomuchdesign/suitcss-components-form/0.0.0/package.tgz
+31 verbose request uri https://registry.npmjs.org/@toomuchdesign%2fsuitcss-components-form
+32 verbose request sending authorization for write operation
+33 info attempt registry request try #1 at 1:44:34 PM
+34 verbose request using bearer token for auth
+35 verbose request id 9db0affa0d2ecb84
+36 http request PUT https://registry.npmjs.org/@toomuchdesign%2fsuitcss-components-form
+37 http 402 https://registry.npmjs.org/@toomuchdesign%2fsuitcss-components-form
+38 verbose headers { 'content-type': 'application/json',
+38 verbose headers   'cache-control': 'max-age=0',
+38 verbose headers   'content-length': '119',
+38 verbose headers   'accept-ranges': 'bytes',
+38 verbose headers   date: 'Thu, 07 Apr 2016 11:44:33 GMT',
+38 verbose headers   via: '1.1 varnish',
+38 verbose headers   connection: 'keep-alive',
+38 verbose headers   'x-served-by': 'cache-fra1244-FRA',
+38 verbose headers   'x-cache': 'MISS',
+38 verbose headers   'x-cache-hits': '0',
+38 verbose headers   'x-timer': 'S1460029471.186414,VS0,VE2152' }
+39 verbose request invalidating /Users/andreacarraro/.npm/registry.npmjs.org/_40toomuchdesign_252fsuitcss-components-form on PUT
+40 error publish Failed PUT 402
+41 verbose stack Error: You need a paid account to perform this action. For more info, visit: https://www.npmjs.com/private-modules : @toomuchdesign/suitcss-components-form
+41 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+41 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+41 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+41 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+41 verbose stack     at emitTwo (events.js:87:13)
+41 verbose stack     at Request.emit (events.js:172:7)
+41 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+41 verbose stack     at emitOne (events.js:82:20)
+41 verbose stack     at Request.emit (events.js:169:7)
+41 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+42 verbose statusCode 402
+43 verbose pkgid @toomuchdesign/suitcss-components-form
+44 verbose cwd /Users/andreacarraro/toomuchdesign/suitcss-components-form
+45 error Darwin 14.5.0
+46 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+47 error node v4.0.0
+48 error npm  v3.7.2
+49 error code E402
+50 error You need a paid account to perform this action. For more info, visit: https://www.npmjs.com/private-modules : @toomuchdesign/suitcss-components-form
+51 error If you need help, you may report this error at:
+51 error     <https://github.com/npm/npm/issues>
+52 verbose exit [ 1, true ]

@@ -4,9 +4,11 @@
   "version": "0.0.0",
   "devDependencies": {
     "csslint": ">=0.9.10",
-    "component": "*"
+    "component": "*",
   },
   "scripts": {
-    "test": "./node_modules/.bin/csslint *.css"
+    "test": "./node_modules/.bin/csslint *.css",
+    "version": "git add package.json",
+    "postversion": "git push && git push --tags"
   }
 }
