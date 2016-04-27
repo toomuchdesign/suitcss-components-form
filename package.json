@@ -2,13 +2,27 @@
   "name": "@toomuchdesign/suitcss-components-form",
   "description": "A very lightweight SUIT component for forms",
   "version": "0.1.0",
+  "license": "MIT",
+  "style": "index.css",
+  "files": [
+    "index.css",
+    "index.js",
+    "lib"
+  ],
   "devDependencies": {
-    "csslint": ">=0.9.10",
-    "component": "*"
+    "stylelint-config-suitcss": "^1.0.0",
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "^2.0.0"
   },
   "scripts": {
+    "preprocess": "suitcss index.css build/build.css",
+    "preprocess-test": "suitcss -i test test/test.css build/test.css",
     "test": "./node_modules/.bin/csslint *.css",
     "version": "git add package.json",
     "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/toomuchdesign/suitcss-components-form.git"
   }
 }

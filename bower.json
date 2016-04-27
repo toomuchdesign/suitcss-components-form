@@ -1,21 +1,10 @@
 {
-    "name": "suit-form",
-    "description": "",
+    "name": "@toomuchdesign/suitcss-components-form",
+    "description": "A very lightweight SUIT component for forms",
     "version": "0.0.0",
-    "main": "form.css",
+    "main": "index.css",
     "dependencies": {
         "normalize-css": "*"
-    },
-    "devDependencies": {
-        "suit-test": "*",
-        "suit-utils-dimension": "*",
-        "suit-utils-display": "*",
-        "suit-utils-offset": "*",
-        "suit-utils-state": "*",
-        "suit-utils-text": "*",
-        "suit-arrange": "*",
-        "suit-button": "*",
-        "suit-grid": "*"
     },
     "ignore": [
         "test",
