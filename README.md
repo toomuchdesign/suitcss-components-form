@@ -32,8 +32,11 @@ This library is a mantainance fork of an [old draft](https://github.com/trunkclu
 - `--Form-input-border-color`
 - `--Form-input-border-radius`
 - `--Form-input-color`
+- `--Form-input-bg-color`
+- `--Form-input-placeholder-color`
 - `--Form-input-font-size`
 - `--Form-input-padding`
+- `--Form-input-onfocus-outline-width`
 - `--Form-select-background`
 - `--Form-select-background-2x`
 - `--Form-select-background-width`

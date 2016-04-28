@@ -11,8 +11,11 @@
   --Form-input-border-color: currentColor;
   --Form-input-border-radius: 3px;
   --Form-input-color: inherit;
+  --Form-input-bg-color: inherit;
+  --Form-input-placeholder-color: inherit;
   --Form-input-font-size: inherit;
   --Form-input-padding: 0.5em;
+  --Form-input-onfocus-outline-width: 5px;
 
   /* Custom <select> arrow properties */
 
@@ -65,7 +68,7 @@
 }
 
 .Form-field--stacked .Form-label {
-  display: block;
+  outline-width: var(--Form-input-onfocus-outline-width);
 }
 
 /**
@@ -77,12 +80,21 @@
   border-radius: var(--Form-input-border-radius);
   box-sizing: border-box;
   color: var(--Form-input-color);
+  background-color: var(--Form-input-bg-color);
   display: block;
   font-family: inherit;
   font-size: var(--Form-input-font-size);
   margin: 0;
   padding: var(--Form-input-padding);
   width: 100%;
+}
+
+.Form-input::placeholder {
+  color: var(--Form-input-placeholder-color);
+}
+
+.Form-input:focus {
+  outline-width: var(--Form-input-onfocus-outline-width);
 }
 
 /* postcss-bem-linter: ignore */
