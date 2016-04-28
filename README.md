@@ -34,9 +34,13 @@ This library is a mantainance fork of an [old draft](https://github.com/trunkclu
 - `--Form-input-color`
 - `--Form-input-font-size`
 - `--Form-input-padding`
+- `--Form-select-background`
+- `--Form-select-background-2x`
+- `--Form-select-background-width`
 - `--Form-label-color`
 - `--Form-label-font-size`
 - `--Form-label-font-weight`
+- `--Form-field-padding`
 - `--Form--inline-form-field-margin`
 
 
@@ -47,10 +51,10 @@ This library is a mantainance fork of an [old draft](https://github.com/trunkclu
 ```html
 <form class="Form">
     <fieldset>
-        <label class="u-isHiddenVisually" for="email">Email</label>
+        <label for="email">Email</label>
         <input class="Form-input" id="email" type="email" placeholder="Email">
 
-        <label class="u-isHiddenVisually" for="password">Password</label>
+        <label for="password">Password</label>
         <input class="Form-input" id="password" type="password" placeholder="Password">
 
         <input id="remember" type="checkbox">
@@ -66,16 +70,16 @@ This library is a mantainance fork of an [old draft](https://github.com/trunkclu
 ```html
 <form class="Form">
     <div class="Form-field">
-        <label class="Form-label u-size1of4" for="name">Choose username</label>
+        <label class="Form-label" for="name">Choose username</label>
         <input class="Form-input" id="name" placeholder="">
     </div>
 
-    <div class="Form-field u-before1of4">
+    <div class="Form-field">
         <input id="remember" type="checkbox">
         <label for="remember">Remember me</label>
     </div>
 
-    <button type="submit" class="Button u-before1of4">Sign up</button>
+    <button type="submit" class="Button">Sign up</button>
 </form>
 ```
 

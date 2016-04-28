@@ -14,6 +14,12 @@
   --Form-input-font-size: inherit;
   --Form-input-padding: 0.5em;
 
+  /* Custom <select> arrow properties */
+
+  --Form-select-background: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAQAAACxSAwfAAAAUklEQVQY02P4z0AMRGZGMaShwCisyhITmb8huMzfEhOxKvuvsGAh208Ik+3ngoX/FbBbClcIUcSAw21QhXxfIIrwKAMpfNsEUYRXGVCEFc6CQwBqq4CCCtU4VgAAAABJRU5ErkJggg==";
+  --Form-select-background-2x: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAQCAQAAAA/1a6rAAAAQUlEQVR4Xu3MsQnAMBAEMI1+myf9gw0+3ASCenmu+mQn2yGn3S4Mp906DEW3CEPfzTD03QxD380w3OmIUHe9v+u9QwAt93yns5cAAAAASUVORK5CYII=";
+  --Form-select-background-width: 20px;
+
   /* .Form-label properties */
 
   --Form-label-color: inherit;
@@ -21,7 +27,7 @@
   --Form-label-font-weight: bold;
 
   /* .Form--spaced properties */
-
+  --Form-field-padding: 5px;
   --Form--inline-form-field-margin: 5px;
 }
 
@@ -50,7 +56,7 @@
 .Form-field {
   display: block;
   margin: 0;
-  padding: 0;
+  padding: var(--Form-field-padding) 0;
 }
 
 .Form--inline .Form-field {
@@ -77,6 +83,36 @@
   margin: 0;
   padding: var(--Form-input-padding);
   width: 100%;
+}
+
+/* postcss-bem-linter: ignore */
+
+select.Form-input {
+  appearance: none; /* 1 */
+
+  /* Custom arrow styles. */
+
+  background-image: url(var(--Form-select-background));
+  background-image:
+    image-set(
+      url(
+        var(
+          --Form-select-background
+        )
+      ) 1x,
+      url(
+        var(
+          --Form-select-background-2x
+        )
+      ) 2x
+    );
+  background-position: right var(--Form-input-padding) center;
+  background-repeat: no-repeat;
+  padding-right:
+    calc(
+      var(--Form-select-background-width) + (2 * var(--Form-input-padding))
+    );
+  padding-right: var(--Form-input-padding) \9; /* 2 */
 }
 
 /**
