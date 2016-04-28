@@ -4,47 +4,79 @@
    SUITCSS component form
    ========================================================================== */
 
+:root {
+
+  /* .Form-input properties */
+
+  --Form-input-border-color: currentColor;
+  --Form-input-border-radius: 3px;
+  --Form-input-color: inherit;
+  --Form-input-font-size: inherit;
+  --Form-input-padding: 0.5em;
+
+  /* .Form-label properties */
+
+  --Form-label-color: inherit;
+  --Form-label-font-size: inherit;
+  --Form-label-font-weight: bold;
+
+  /* .Form--spaced properties */
+
+  --Form--inline-form-field-margin: 5px;
+}
+
 /**
  * A thin layer on top of normalize.css that provides a starting point more
  * suitable for web applications. Removes the default spacing and border for
  * appropriate elements.
  */
 
-/* postcss-bem-linter: ignore */
+/**
+ * Form container – usually the <form> element.
+ */
 
-.Form fieldset {
-  border: 0;
+.Form {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+/**
+ * Form field.
+ *
+ * Container for text (label), a form input and (optionally) a message.
+ */
+
+.Form-field {
+  display: block;
   margin: 0;
   padding: 0;
 }
 
-/* postcss-bem-linter: ignore */
-
-.Form label,
-.Form input,
-.Form textarea,
-.Form select {
+.Form--inline .Form-field {
   display: inline-block;
-  vertical-align: middle;
+  margin-right: var(--Form--inline-form-field-margin);
 }
 
-.Form--inline .Form-item {
-  display: inline-block;
-  margin-right: 5px;
-}
-
-.Form-item {
-  margin: 0 0 1em;
-}
-
-.Form-item--stacked .Form-label {
+.Form-field--stacked .Form-label {
   display: block;
 }
 
+/**
+ * Form input.
+ */
+
 .Form-input {
-  border: 1px solid #000;
+  border: 1px solid var(--Form-input-border-color);
+  border-radius: var(--Form-input-border-radius);
   box-sizing: border-box;
-  padding: 0.5em 0.6em;
+  color: var(--Form-input-color);
+  display: block;
+  font-family: inherit;
+  font-size: var(--Form-input-font-size);
+  margin: 0;
+  padding: var(--Form-input-padding);
+  width: 100%;
 }
 
 /**
@@ -62,4 +94,15 @@
 
 .Form-input:focus {
   border-color: #1980ce;
+}
+
+/**
+ * Form label.
+ */
+
+.Form-label {
+  color: var(--Form-label-color);
+  display: inline-block;
+  font-size: var(--Form-label-font-size);
+  font-weight: var(--Form-label-font-weight);
 }

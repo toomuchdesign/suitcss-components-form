@@ -21,10 +21,23 @@ This library is a mantainance fork of an [old draft](https://github.com/trunkclu
 
 - `Form` - Provides some basic display and alignment adjustments to form elements.
 - `Form--inline` -.
-- `Form-item` - The wrapper for a label-control pair.
-- `Form-item--stacked` - Modifier to stack labels on top of controls.
+- `Form-field` - The wrapper for a label-control pair.
+- `Form-field--stacked` - Modifier to stack labels on top of controls.
 - `Form-label` - A control's _visual_ label.
 - `Form-input` - Styles intended for text-based controls (e.g., `textarea` or `input`)
+
+
+## Configurable variables
+
+- `--Form-input-border-color`
+- `--Form-input-border-radius`
+- `--Form-input-color`
+- `--Form-input-font-size`
+- `--Form-input-padding`
+- `--Form-label-color`
+- `--Form-label-font-size`
+- `--Form-label-font-weight`
+- `--Form--inline-form-field-margin`
 
 
 ## Usage
@@ -52,12 +65,12 @@ This library is a mantainance fork of an [old draft](https://github.com/trunkclu
 
 ```html
 <form class="Form">
-    <div class="Form-item">
+    <div class="Form-field">
         <label class="Form-label u-size1of4" for="name">Choose username</label>
         <input class="Form-input" id="name" placeholder="">
     </div>
 
-    <div class="Form-item u-before1of4">
+    <div class="Form-field u-before1of4">
         <input id="remember" type="checkbox">
         <label for="remember">Remember me</label>
     </div>
@@ -71,7 +84,7 @@ Example of a stacked form:
 
 ```html
 <form class="Form">
-    <div class="Form-item Form-item--stacked">
+    <div class="Form-field Form-field--stacked">
         <label class="Form-label" for="name">Choose username</label>
         <input class="Form-input" id="name" placeholder="">
     </div>
