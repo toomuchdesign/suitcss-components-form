@@ -1,3 +1,5 @@
+/** @define Form */
+
 /* ==========================================================================
    SUITCSS component form
    ========================================================================== */
@@ -8,39 +10,41 @@
  * appropriate elements.
  */
 
-.Form {}
+/* postcss-bem-linter: ignore */
 
 .Form fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
+
+/* postcss-bem-linter: ignore */
 
 .Form label,
 .Form input,
 .Form textarea,
 .Form select {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .Form--inline .Form-item {
-    display: inline-block;
-    margin-right: 5px;
+  display: inline-block;
+  margin-right: 5px;
 }
 
 .Form-item {
-    margin: 0 0 1em;
+  margin: 0 0 1em;
 }
 
 .Form-item--stacked .Form-label {
-    display: block;
+  display: block;
 }
 
 .Form-input {
-    border: 1px solid #000;
-    box-sizing: border-box;
-    padding: 0.5em 0.6em;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  padding: 0.5em 0.6em;
 }
 
 /**
@@ -48,7 +52,7 @@
  */
 
 .Form-input[type="search"] {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /**
@@ -57,5 +61,5 @@
  */
 
 .Form-input:focus {
-    border-color: #1980ce;
+  border-color: #1980ce;
 }

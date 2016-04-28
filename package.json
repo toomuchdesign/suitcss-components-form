@@ -10,17 +10,17 @@
     "lib"
   ],
   "devDependencies": {
-    "stylelint-config-suitcss": "^1.0.0",
+    "stylelint-config-suitcss": "^5.0.0",
     "suitcss-components-test": "*",
     "suitcss-preprocessor": "^2.0.0"
   },
   "scripts": {
     "build": "npm run preprocess",
     "build-test": "npm run preprocess-test",
-    "preprocess": "suitcss index.css build/build.css",
+    "preprocess": "suitcss -c index.css build/build.css",
     "preprocess-test": "suitcss -i test test/test.css build/test.css",
     "watch": "npm run preprocess-test -- -w -v",
-    "test": "./node_modules/.bin/csslint *.css",
+    "test": "suitcss -c test/config.json index.css build/lint.css && rm build/lint.css",
     "version": "git add package.json",
     "postversion": "git push && git push --tags"
   },
