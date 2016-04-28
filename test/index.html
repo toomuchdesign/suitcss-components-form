@@ -27,38 +27,37 @@
     <h3 class="Test-it">renders descendant `fieldset` without any border, margin, or padding</h3>
     <div class="Test-run" id="renders-fieldset">
         <form class="Form">
-            <fieldset>Fieldset</fieldset>
+            <fieldset class="Form-field">Fieldset</fieldset>
         </form>
     </div>
-    <h3 class="Test-it">renders descendant `label`, `input`, `textarea`, and `select` elements as middle-aligned inline-blocks</h3>
+    <h3 class="Test-it">renders standard form</h3>
     <div class="Test-run">
         <form class="Form">
-            <label>Label</label>
-            <input placeholder="Input">
-            <textarea>Textarea</textarea>
-            <select>
-                <option>Select</option>
-            </select>
-        </form>
-    </div>
-    <h3 class="Test-it">does something else</h3>
-    <div class="Test-run" id="">
-        <div class="Form"></div>
-    </div>
+            <div class="Form-field">
+                <label class="Form-label">Label</label>
+                <input class="Form-input" placeholder="Input">
+            </div>
 
-    <h2 class="Test-describe">.Form-item</h2>
-    <h3 class="Test-it">does something else</h3>
-    <div class="Test-run" id="">
-        <div class="Form"></div>
+            <div class="Form-field">
+                <label class="Form-label">Label</label>
+                <textarea class="Form-input">Textarea</textarea>
+            </div>
+
+            <div class="Form-field">
+                <select class="Form-input">
+                    <option>Select</option>
+                </select>
+            </div>
+        </form>
     </div>
 
     <h2 class="Test-describe">.Form-input</h2>
     <h3 class="Test-it">does something else</h3>
     <div class="Test-run" id="">
-        <div class="Form"></div>
+        <input class="Form-input" placeholder="Input">
     </div>
 
-    <h2 class="Test-describe">.Form-item--stacked</h2>
+    <h2 class="Test-describe">.Form-field--stacked</h2>
     <h3 class="Test-it">does something else</h3>
     <div class="Test-run" id="">
         <div class="Form"></div>
@@ -68,22 +67,22 @@
     <h3 class="Test-it">does something else</h3>
     <div class="Test-run" id="">
         <form class="Form Form--inline">
-            <div class="Form-item">
-                <label class="u-isHiddenVisually" for="email1">Email</label>
+            <div class="Form-field">
+                <label for="email1">Email</label>
                 <input class="Form-input" id="email1" type="email" placeholder="Email">
             </div>
 
-            <div class="Form-item">
-                <label class="u-isHiddenVisually" for="password1">Password</label>
+            <div class="Form-field">
+                <label for="password1">Password</label>
                 <input class="Form-input" id="password1" type="password" placeholder="Password">
             </div>
 
-            <div class="Form-item">
+            <div class="Form-field">
                 <input id="remember1" type="checkbox">
                 <label for="remember1">Remember me</label>
             </div>
 
-            <div class="Form-item">
+            <div class="Form-field">
                 <button type="submit" class="Button">Sign in</button>
             </div>
         </form>
@@ -93,7 +92,7 @@
     <h3 class="Test-it">does something else</h3>
     <div class="Test-run" id="">
         <form class="Form">
-            <div class="Form-item">
+            <div class="Form-field">
                 <div class="Grid Grid--alignMiddle Grid--withGutter">
                     <div class="Grid-cell u-size1of4 u-textRight">
                         <label class="Form-label" for="name2">Choose username</label>
@@ -105,7 +104,7 @@
                 </div>
             </div>
 
-            <div class="Form-item">
+            <div class="Form-field">
                 <div class="Grid Grid--alignMiddle Grid--withGutter">
                     <div class="Grid-cell u-size1of4 u-textRight">
                         <label class="Form-label" for="password2">Password</label>
@@ -117,13 +116,13 @@
                 </div>
             </div>
 
-            <div class="Form-item">
+            <div class="Form-field">
                 <div class="Grid Grid--alignMiddle Grid--withGutter">
                     <div class="Grid-cell u-size1of4 u-textRight">
                         <label class="Form-label" for="cat2">Pick a category</label>
                     </div>
                     <div class="Grid-cell u-size3of4">
-                        <select id="cat2">
+                        <select class="Form-input" id="cat2">
                             <option>Mustaches of the world</option>
                             <option>Long lost music</option>
                             <option>Interesting colours</option>
@@ -132,7 +131,7 @@
                 </div>
             </div>
 
-            <div class="Form-item">
+            <div class="Form-field">
                 <div class="Grid Grid--alignMiddle Grid--withGutter">
                     <div class="Grid-cell u-before1of4 u-size3of4">
                         <input id="remember" type="checkbox">
@@ -141,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="Form-item">
+            <div class="Form-field">
                 <div class="Grid Grid--alignMiddle Grid--withGutter">
                     <div class="Grid-cell u-before1of4 u-size3of4">
                         <div class="u-inlineBlock">
@@ -157,33 +156,33 @@
     <h3 class="Test-it">does something else</h3>
     <div class="Test-run" id="">
         <form class="Form">
-            <div class="Form-item Form-item--stacked">
+            <div class="Form-field Form-field--stacked">
                 <label class="Form-label" for="email3">Email</label>
                 <input class="Form-input" id="email3" type="email" placeholder="Email">
                 <span class="u-inlineBlock">Success and error message on the side when there is space</span>
             </div>
 
-            <div class="Form-item Form-item--stacked">
+            <div class="Form-field Form-field--stacked">
                 <label class="Form-label" for="password3">Password</label>
                 <input class="Form-input" id="password3" type="password" placeholder="Password">
                 <div>Success and error message underneath</div>
             </div>
 
-            <div class="Form-item Form-item--stacked">
+            <div class="Form-field Form-field--stacked">
                 <label class="Form-label" for="country3">Country</label>
-                <select id="country3">
+                <select class="Form-input" id="country3">
                     <option>UK</option>
                     <option>US</option>
                     <option>France</option>
                 </select>
             </div>
 
-            <div class="Form-item Form-item--stacked">
+            <div class="Form-field Form-field--stacked">
                 <label class="Form-label" for="extra3">Additional details</label>
                 <textarea class="Form-input" id="extra3" placeholder="Your comment"></textarea>
             </div>
 
-            <div class="Form-item">
+            <div class="Form-field">
                 <label>
                     <input type="radio" name="radioname"> Yes
                 </label>
@@ -192,12 +191,12 @@
                 </label>
             </div>
 
-            <div class="Form-item">
+            <div class="Form-field">
                 <input type="checkbox" id="remember3">
                 <label for="remember3">Remember me</label>
             </div>
 
-            <div class="Form-item">
+            <div class="Form-field">
                 <div class="u-inlineBlock">
                     <button type="submit" class="Button">Sign in</button>
                 </div>
@@ -205,61 +204,4 @@
         </form>
     </div>
 
-    <h2 class="Test-describe">Full-width inputs (requires utils-dimension)</h2>
-    <h3 class="Test-it">does something else</h3>
-    <div class="Test-run" id="">
-        <div>
-            <input class="Form-input u-sizeFull" type="search" placeholder="Input 100% width">
-        </div>
-        <div>
-            <textarea class="Form-input u-sizeFull" placeholder="Textarea 100% width"></textarea>
-        </div>
-        <div>
-            <select class="u-sizeFull">
-                <option>A</option>
-            </select>
-        </div>
-    </div>
-
-    <h2 class="Test-describe">Proportional-width inputs (requires utils-dimension)</h2>
-    <h3 class="Test-it">does something else</h3>
-    <div class="Test-run" id="">
-        <div>
-            <input class="Form-input u-size1of2" placeholder="Input 50% width">
-        </div>
-        <div>
-            <input class="Form-input u-size1of3" placeholder="Input 33% width">
-        </div>
-        <div>
-            <input class="Form-input u-size1of4" placeholder="Input 25% width">
-        </div>
-    </div>
-
-    <h2 class="Test-describe">Mini form (requires utils-dimension, arrange, button)</h2>
-    <h3 class="Test-it">does something else</h3>
-    <div class="Test-run" id="">
-        <form class="Form" style="width: 300px;">
-            <div class="Form-item">
-                <label class="u-isHiddenVisually" for="email4">Username or email</label>
-                <input class="Form-input u-sizeFull" id="email4" placeholder="Username or email">
-            </div>
-            <div class="Form-item">
-                <div class="Arrange Arrange--withGutter Arrange--middle">
-                    <div class="Arrange-sizeFill">
-                        <label class="u-isHiddenVisually" for="password4">Password</label>
-                        <input class="Form-input u-sizeFull" id="password4" placeholder="Password">
-                    </div>
-                    <div class="Arrange-sizeFit">
-                        <button class="Button">Sign in</button>
-                    </div>
-                </div>
-            </div>
-            <div class="Form-item">
-                <input type="checkbox" id="remember4">
-                <label for="remember4">Remember me</label>
-                &middot;
-                <a href="#">Forgotten password</a>
-            </div>
-        </form>
-    </div>
 </div>
