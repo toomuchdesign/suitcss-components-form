@@ -34,6 +34,7 @@ This library is a mantainance fork of an [old draft](https://github.com/trunkclu
 - `--Form-input-color`
 - `--Form-input-bg-color`
 - `--Form-input-placeholder-color`
+- `--Form-input-placeholder-opacity`
 - `--Form-input-font-size`
 - `--Form-input-padding`
 - `--Form-input-onfocus-outline-width`
