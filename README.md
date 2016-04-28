@@ -1,6 +1,6 @@
 # SUIT CSS components-form
 
-[![Build Status](https://secure.travis-ci.org/suitcss/form.png?branch=master)](http://travis-ci.org/toomuchdesign/suitcss-components-form)
+[![Build Status](https://travis-ci.org/toomuchdesign/suitcss-components-form.svg?branch=master)](https://travis-ci.org/toomuchdesign/suitcss-components-form)
 
 A very lightweight SUIT component for forms.
 
