@@ -1,0 +1,231 @@
+/** @define Test */
+
+/**
+ * The 'describe' CSS counter
+ */
+
+.Test {
+  counter-reset: test-describe;
+}
+
+.Test-describe::before {
+  content: counter(test-describe);
+  counter-increment: test-describe;
+}
+
+/**
+ * The 'it' CSS counter
+ */
+
+.Test-describe {
+  counter-reset: test-it;
+}
+
+.Test-it::before {
+  content: counter(test-describe) "." counter(test-it);
+  counter-increment: test-it;
+}
+
+/**
+ * The test title
+ */
+
+.Test-title {
+  background: #eee;
+  color: #999;
+  font-family: sans-serif;
+  font-size: 2em;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+/**
+ * The test description and expectation titles
+ */
+
+.Test-describe,
+.Test-it {
+  background: #eee;
+  border-left: 5px solid #666;
+  color: #666;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 0.75em 20px;
+}
+
+.Test-describe {
+  font-size: 1.5em;
+  margin: 60px 0 20px;
+}
+
+/**
+ * The counter styles
+ */
+
+.Test-describe::before,
+.Test-it::before {
+  color: #999;
+  display: inline-block;
+  margin-right: 10px;
+  min-width: 30px;
+  text-transform: uppercase;
+}
+
+/** @define Form */
+
+/* ==========================================================================
+   SUITCSS component form
+   ========================================================================== */
+
+:root {
+
+  /* .Form-input properties */
+
+  /* Custom <select> arrow properties */
+
+  /* .Form-label properties */
+
+  /* .Form--spaced properties */
+}
+
+/**
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications. Removes the default spacing and border for
+ * appropriate elements.
+ */
+
+/**
+ * Form container – usually the <form> element.
+ */
+
+.Form {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+/**
+ * Form field.
+ *
+ * Container for text (label), a form input and (optionally) a message.
+ */
+
+.Form-field {
+  display: block;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.Form--inline .Form-field {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.Form-field--stacked .Form-label {
+  outline-width: 5px;
+}
+
+/**
+ * Form input.
+ */
+
+.Form-input {
+  background-color: inherit;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: inherit;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.Form-input::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+.Form-input::-moz-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+.Form-input:-ms-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+.Form-input::placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+.Form-input:focus {
+  outline-width: 5px;
+}
+
+/* postcss-bem-linter: ignore */
+
+select.Form-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; /* 1 */
+
+  /* Custom arrow styles. */
+
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAQAAACxSAwfAAAAUklEQVQY02P4z0AMRGZGMaShwCisyhITmb8huMzfEhOxKvuvsGAh208Ik+3ngoX/FbBbClcIUcSAw21QhXxfIIrwKAMpfNsEUYRXGVCEFc6CQwBqq4CCCtU4VgAAAABJRU5ErkJggg==");
+  background-image: -webkit-image-set(
+      url(
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAQAAACxSAwfAAAAUklEQVQY02P4z0AMRGZGMaShwCisyhITmb8huMzfEhOxKvuvsGAh208Ik+3ngoX/FbBbClcIUcSAw21QhXxfIIrwKAMpfNsEUYRXGVCEFc6CQwBqq4CCCtU4VgAAAABJRU5ErkJggg=="
+      ) 1x,
+      url(
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAQCAQAAAA/1a6rAAAAQUlEQVR4Xu3MsQnAMBAEMI1+myf9gw0+3ASCenmu+mQn2yGn3S4Mp906DEW3CEPfzTD03QxD380w3OmIUHe9v+u9QwAt93yns5cAAAAASUVORK5CYII="
+      ) 2x
+    );
+  background-image: image-set(
+      url(
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAQAAACxSAwfAAAAUklEQVQY02P4z0AMRGZGMaShwCisyhITmb8huMzfEhOxKvuvsGAh208Ik+3ngoX/FbBbClcIUcSAw21QhXxfIIrwKAMpfNsEUYRXGVCEFc6CQwBqq4CCCtU4VgAAAABJRU5ErkJggg=="
+      ) 1x,
+      url(
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAQCAQAAAA/1a6rAAAAQUlEQVR4Xu3MsQnAMBAEMI1+myf9gw0+3ASCenmu+mQn2yGn3S4Mp906DEW3CEPfzTD03QxD380w3OmIUHe9v+u9QwAt93yns5cAAAAASUVORK5CYII="
+      ) 2x
+    );
+  background-position: right 0.5em center;
+  background-repeat: no-repeat;
+  padding-right: calc(
+      20px + 1em
+    );
+  padding-right: 0.5em \9; /* 2 */
+}
+
+/**
+ * Override the normalize.css search input `box-sizing` normalization.
+ */
+
+.Form-input[type="search"] {
+  box-sizing: border-box;
+}
+
+/**
+ * Add a basic focus style because Firefox removes the default focus style when
+ * the unfocused input has an explicit border color set.
+ */
+
+.Form-input:focus {
+  border-color: #1980ce;
+}
+
+/**
+ * Form label.
+ */
+
+.Form-label {
+  color: inherit;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+}
