@@ -29,10 +29,11 @@
     "url": "git://github.com/toomuchdesign/suitcss-components-form.git"
   },
   "keywords": [
-    "browser",
-    "css-components",
-    "form",
     "suitcss",
+    "components",
+    "component",
+    "form",
+    "css-components",
     "style"
   ]
 }
