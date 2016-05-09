@@ -38,9 +38,8 @@ This library is a mantainance fork of an [old draft](https://github.com/trunkclu
 - `--Form-input-font-size`
 - `--Form-input-padding`
 - `--Form-input-onfocus-outline-width`
-- `--Form-select-background`
-- `--Form-select-background-2x`
-- `--Form-select-background-width`
+- `--Form-select-arrow`
+- `--Form-select-arrow-width`
 - `--Form-label-color`
 - `--Form-label-font-size`
 - `--Form-label-font-weight`
